@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Headers Demo - X-Tag</title>
+    <link rel="stylesheet" type="text/css" href="../src/headers.css">
+    <script type="text/javascript" src="../../core/src/x-tag-core/dist/x-tag-core.js"></script>
+    <script type="text/javascript" src="../src/headers.js"></script>
+  </head>
+
+  <body>
+    <x-appbar id="header">
+      <menu type="toolbar">
+        <button><span class="icon icon-edit">edit</span></button>
+        <button><span class="icon icon-add">add</span></button>
+      </menu>
+      <button><span class="icon icon-back">back</span></button>
+      <h1>Tiltle<em> (2)</em></h1>
+    </x-appbar>
+
+    <x-appbar navigation="back" heading="Title" subheading="(2)">
+      <menu type="toolbar">
+        <button><span class="icon icon-edit">edit</span></button>
+        <button><span class="icon icon-add">add</span></button>
+      </menu> 
+    </x-appbar>
+
+    <x-appbar theme="dark" navigation="back" heading="Title" subheading="(3)">
+      <menu type="toolbar">
+        <button><span class="icon icon-edit">edit</span></button>
+        <button><span class="icon icon-add">add</span></button>
+      </menu> 
+    </x-appbar>
+
+  </body>
+  <script>
+    document.addEventListener('DOMComponentsLoaded', function(){
+      document.getElementById('header').heading = 'Reset title';
+      document.getElementById('header').subheading = '(1)';
+    });
+  </script>
+</html>

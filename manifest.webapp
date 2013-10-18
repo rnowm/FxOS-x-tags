@@ -1,0 +1,11 @@
+{
+  "name": "x-tags",
+  "description": "x-tags demo app",
+  "launch_path": "/headers/demo/index.html",
+  "version": "1",
+  "developer": {
+    "name": "Arnau March",
+    "url": "http://buildingfirefoxos.com"
+  },
+  "default_locale": "en"
+}
