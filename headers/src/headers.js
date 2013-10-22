@@ -1,16 +1,26 @@
 (function(){
 
-  xtag.register('x-appbar', {
+  xtag.register('bb-header', {
     lifecycle: {
-      created: function(){        
-        var navType = this.getAttribute('navigation');
+      created: function(){
+        var actionButton = xtag.queryChildren(this, 'button');
+        for (var i=0; i<actionButton.length; i++) {
+          if (actionButton[i].className == "icon") {
+            actionButton[i].className = "icon icon-" 
+              + actionButton[i].innerHTML;
+          }
+          actionButton[i].classList.add('action');
+        }
+
+        var navType = this.getAttribute('nav');
         if (navType){
-          var navButton = document.createElement('button');
-          navSpan = document.createElement('span');
-          navButton.appendChild(navSpan);
-          navSpan.innerHTML = navType;
-          navSpan.className = 'icon icon-' + navType;
-          this.appendChild(navButton);
+          navButton = document.createElement('button');
+          navButton.className = 'nav icon icon-nav-' + navType;
+          if (actionButton.length === 0) {
+            this.appendChild(navButton);
+          } else {
+            this.insertBefore(navButton, actionButton[0])
+          }
         }
 
         var heading = xtag.queryChildren(this, 'h1')[0];
@@ -18,18 +28,24 @@
           heading = document.createElement('h1');
           var headingText = document.createTextNode('');
           heading.appendChild(headingText);
+          if (actionButton.length === 0) {
+            this.appendChild(heading);
+          } else {
+            this.insertBefore(heading, actionButton[0])
+          }
+        }
+
+        var counter = xtag.queryChildren(this, 'h1 em')[0];
+        if (!counter){
+          var counter = this.getAttribute('counter');
+          if (counter){
+            counter = document.createElement('em');
+            heading.appendChild(counter);
+          }
         }
         
-        var subheading = xtag.queryChildren(this, 'h1 em')[0];
-        if (!subheading){
-          subheading = document.createElement('em');
-          heading.appendChild(subheading);
-        }
-        this.appendChild(heading);
-
         this.xtag.data.heading = heading;
-        this.xtag.data.subheading = subheading;
-
+        this.xtag.data.counter = counter;
       }
     },
     accessors: {
@@ -42,13 +58,37 @@
           this.xtag.data.heading.firstChild.textContent = value;
         }
       },
-      subheading: {
+      counter: {
         attribute: {},
         get: function(){
-          return this.xtag.data.subheading.innerHTML;
+          return this.xtag.data.counter.innerHTML;
         },
         set: function(value){
-          this.xtag.data.subheading.innerHTML = value;
+          this.xtag.data.counter.innerHTML = value;
+        }
+      }
+    }
+  });
+  
+  xtag.register('bb-subheader', {
+    lifecycle: {
+      created: function(){
+        var heading = this.innerHTML;
+        if (!heading){
+          heading = document.createTextNode('');
+          this.appendChild(heading);
+        }
+        this.xtag.data.heading = heading;
+      }
+    },
+    accessors: {
+      heading: {
+        attribute: {},
+        get: function(){
+          return this.xtag.data.heading.textContent;
+        },
+        set: function(value){          
+          this.xtag.data.heading.textContent = value;
         }
       }
     }
