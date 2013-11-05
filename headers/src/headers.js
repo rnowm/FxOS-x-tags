@@ -54,7 +54,7 @@
         get: function(){
           return this.xtag.data.heading.firstChild.textContent;
         },
-        set: function(value){          
+        set: function(value){
           this.xtag.data.heading.firstChild.textContent = value;
         }
       },
@@ -87,7 +87,7 @@
         get: function(){
           return this.xtag.data.heading.textContent;
         },
-        set: function(value){          
+        set: function(value){
           this.xtag.data.heading.textContent = value;
         }
       }

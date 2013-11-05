@@ -79,6 +79,7 @@ bb-header button {
   border: none;
   margin: 0;
   padding: 0 1rem;
+  border-radius: 0;
 }
 
 bb-header .icon {

@@ -1,7 +1,7 @@
 {
   "name": "x-tags",
   "description": "x-tags demo app",
-  "launch_path": "/headers/demo/index.html",
+  "launch_path": "/index.html",
   "version": "1",
   "developer": {
     "name": "Arnau March",

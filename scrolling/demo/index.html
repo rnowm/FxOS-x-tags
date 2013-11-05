@@ -10,22 +10,19 @@
       html {
         font-size: 10px;
       }
-      bb-scrolling p {
-        opacity: 1;
-      }
     </style>
   </head>
 
   <body>
     
-    <bb-scrolling>
-      <p>A</p>
-    </bb-scrolling>
+    <bb-scrolling></bb-scrolling>
 
   </body>
   <script>
     document.addEventListener('DOMComponentsLoaded', function(){
-
+      scrolling.addEventListener('letterChange', function(letter) {
+        console.log(letter);
+      });
     });
   </script>
 </html>
