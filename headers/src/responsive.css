@@ -4,32 +4,28 @@
 
 @media screen and (orientation: landscape) {
 
-  bb-header {
+  :scope {
     height: 3.5rem;
   }
 
-  bb-header:after {
-    top: 3.6rem;
-  }
-
-  bb-header h1 {
+  :scope h1 {
     font-size: 1.8rem;
     line-height: 3.5rem;
   }
 
-  bb-header a,
-  bb-header button {
+  :scope a,
+  :scope button {
     font-size: 1.2rem;
     height: 3.5rem;
     line-height: 3.5rem;
   }
 
-  bb-header a:after,
-  bb-header button:after {
+  :scope a:after,
+  :scope button:after {
     background-size: 0.2rem 3.5rem;
   }
 
-  bb-header .icon:before {
+  :scope .icon:before {
     top: 0.3rem;
   }
 
