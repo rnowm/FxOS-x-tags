@@ -1,0 +1,101 @@
+:scope {
+  background-color: #F97C17;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  height: 5rem;
+  color: #fff;
+}
+:scope h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0 0 0 2rem;
+  padding-right: 1rem;
+  height: 100%;
+  font-weight: normal;
+  flex-grow: 1;
+}
+
+:scope h1 em {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1em;
+  font-style: normal;
+  margin-left: 0.5rem;
+}
+:scope a ~ h1 {
+  margin-left: -2rem;
+}
+:scope button::-moz-focus-inner {
+  outline: none;
+  border: none;
+  margin-top: -0.2rem;
+}
+:scope a,
+:scope button {
+  -moz-box-sizing: border-box;
+  position: relative;
+  min-width: 5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.5rem;
+  height: 5rem;
+  line-height: 5rem;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0 1rem;
+  border-radius: 0;
+}
+:scope .icon {
+  font-size: 0;
+}
+:scope .icon:before {
+  color: rgba(0,0,0,0.3);
+  top: 1rem;
+  left: 0;
+  z-index: 1;
+}
+:scope menu .icon:before {
+  left: 1rem;
+  color: white;
+}
+:scope menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  order: 2;
+}
+/* Pressed state */
+:scope button:after,
+:scope a:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: no-repeat left center;
+}
+:scope > button:after,
+:scope > a:after {
+  right: 2rem;
+}
+:scope a:hover:after,
+:scope a:active:after,
+:scope button:hover:after,
+:scope button:active:after {
+  background-color: #008aaa;
+}
+/* Disabled state */
+:scope [disabled],
+:scope [aria-disabled]  {
+  opacity: 0.5;
+  pointer-events: none;
+}
+

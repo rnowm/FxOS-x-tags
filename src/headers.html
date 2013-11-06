@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- External librairies -->
+    <script type="text/javascript" src="../lib/handlebars.js"></script>
+    <script type="text/javascript" src="../lib/x-tag-core.js"></script>
+    <link rel="stylesheet" href="../lib/icons.css">
+
+    <!-- Header component -->
+    <script type="text/javascript" src="headers.js"></script>
+    <link rel="import" href="templates.html">
+    <!-- Utils -->
+    <script type="text/javascript" src="../lib/import.js"></script>
+  </head>
+  <body>
+    <section role="region">
+      <bb-header heading="Messages" nav="back" nav-action="#back" nav-id="back-button">
+        <a href="#"><span class="icon icon-edit">edit</span></a>
+        <a href="#"><span class="icon icon-add">add</span></a>
+      </bb-header>
+    </section>
+    <hr/>
+    <section role="region">
+      <bb-header heading="Messages" nav="menu" nav-action="#menu"></bb-header>
+    </section>
+    <hr/>
+    <section role="region">
+      <bb-header></bb-header>
+    </section>
+    <hr/>
+    <section role="region">
+      <bb-header heading="Contact name" nav="close" nav-action="#close" nav-id="close-button"></bb-header>
+    </section>
+    <hr/>
+    <section role="region">
+      <bb-header counter="(2)"></bb-header>
+    </section>
+  </body>
+</html>
+

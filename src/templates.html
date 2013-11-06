@@ -1,0 +1,15 @@
+<template id="header-template">
+  <header>
+    <style scoped>
+      @import 'headers.css';
+    </style>
+    {{#a href=nav-action id=nav-id}}
+      <span class="icon icon-{{nav}}" data-l10n-id="{{nav}}"></span>
+    {{/a}}
+    <menu type="toolbar">
+      {{{content}}}
+    </menu>
+    <h1>{{heading}}{{{em counter}}}</h1>
+  </header>
+</template>
+
