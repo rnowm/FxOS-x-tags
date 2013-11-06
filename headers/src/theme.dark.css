@@ -3,11 +3,11 @@
 */
 
 :scope {
-  background-color: #333;
+  background-color: rgba(36, 45, 51, 0.9);
 }
 
 :scope .icon:before {
-  color: rgba(0,0,0,0.3);
+  color: #00aacc;
 }
 
 :scope .action.icon:before,

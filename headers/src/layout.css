@@ -117,15 +117,3 @@
   opacity: 0.5;
   pointer-events: none;
 }
-
-/*
-  Subheader
-*/
-
-bb-subheader {
-  padding: 0.8rem 3rem;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.8rem;
-  display: block;
-}
