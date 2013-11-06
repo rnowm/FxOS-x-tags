@@ -1,0 +1,41 @@
+/*
+  Rotation support
+*/
+
+@media screen and (orientation: landscape) {
+
+  header {
+    height: 3.5rem;
+  }
+
+  header:after {
+    top: 3.6rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+  }
+
+  header a,
+  header button {
+    font-size: 1.2rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  header a:after,
+  header button:after {
+    background-size: 0.2rem 3.5rem;
+  }
+
+  header .icon:before {
+    top: 0.3rem;
+  }
+
+  bb-subheader {
+    font-size: 1.2rem;
+    line-height: 0.6rem;
+  }
+
+}
