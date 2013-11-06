@@ -1,0 +1,145 @@
+/*
+  Defaults & name spaces definition
+*/
+
+header,
+bb-subheader {
+  font-family: sans-serif;
+}
+
+header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  height: 5rem;
+  color: #fff;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+}
+
+header:after {
+  content: "";
+  display: block;
+  height: 0.3rem;
+  position: absolute;
+  top: 5.1rem;
+  left: 0;
+  right: 0;
+  background: linear-gradient(rgba(0,0,0,0.44), rgba(0,0,0,0.44), rgba(0,0,0,0.16), rgba(0,0,0,0.16), rgba(0,0,0,0.08), rgba(0,0,0,0.08));
+}
+
+header h1 {
+  font-size: 2.5rem;
+  line-height: 5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0 0 0 3rem;
+  padding-right: 1rem;
+  height: 100%;
+  font-weight: normal;
+  flex-grow: 1;
+}
+
+header h1 em {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1em;
+  font-style: normal;
+  margin-left: 0.5rem;
+}
+
+header .nav + h1 {
+  margin-left: -1rem;
+}
+
+/*
+  Default buttons
+*/
+
+/* fix for button alignment */
+header button::-moz-focus-inner {
+  outline: none;
+  border: none;
+  margin-top: -0.2rem;
+}
+
+header a,
+header button {
+  -moz-box-sizing: border-box;
+  position: relative;
+  min-width: 5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.5rem;
+  height: 5rem;
+  line-height: 5rem;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0 1rem;
+  border-radius: 0;
+}
+
+header .icon {
+  font-size: 0;
+}
+
+header .icon:before {
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+}
+
+header .nav.icon:before {
+  left: 0;
+}
+
+/* Dividers */
+header button:after,
+header a:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: no-repeat left center;
+}
+
+header .nav:after {
+  background-position: 2.8rem center;
+  width: 3rem;
+}
+
+header .action:nth-last-child(2):after {
+  background: none;
+}
+
+/* Pressed state */
+header .nav:hover:after,
+header .nav:active:after,
+header .action:hover,
+header .action:active {
+  background-color: #008aaa;
+}
+
+/* Disabled state */
+header [disabled],
+header [aria-disabled]  { 
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/*
+  Subheader
+*/
+
+bb-subheader {
+  padding: 0.8rem 3rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  display: block;
+}
