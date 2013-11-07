@@ -20,85 +20,58 @@
   <body>
 
     <bb-header id="header" heading="Title" counter="(1)">
-      <style scoped>@import url("../src/headers.css");</style>
+      <style scoped>@import url("../src/bb-header.css");</style>
     </bb-header>
     
     <bb-header nav="back" heading="Title" counter="(1)">
-      <style scoped>@import url("../src/headers.css");</style>
+      <style scoped>@import url("../src/bb-header.css");</style>
       <button>edit</button>
       <button>add</button>
     </bb-header>
     <bb-subheader>
-      <style scoped>
-        :scope {
-          padding: 0.8rem 3rem;
-          font-weight: 400;
-          font-size: 1.5rem;
-          line-height: 1.8rem;
-          display: block;
-          color: #333;
-        }
-      </style>
+      <style scoped>@import url("../src/bb-subheader.css");</style>
       Subheader
     </bb-subheader>
 
-    <section class="theme-dark">
-      <bb-header nav="back" heading="Dark theme" counter="(1)">
-        <style scoped>
-          @import url("../src/headers.css");
-          @import url("../src/theme.dark.css");
-        </style>
+    <section>
+      <bb-header nav="back" heading="Dark theme" counter="(1)" class="theme-dark">
+        <style scoped>@import url("../src/bb-header.css");</style>
         <button class="icon">list-edit</button>
         <button class="icon">add</button>
       </bb-header>
-      <bb-subheader heading="Subheader">
-        <style scoped>
-          :scope {
-            padding: 0.8rem 3rem;
-            font-weight: 400;
-            font-size: 1.5rem;
-            line-height: 1.8rem;
-            display: block;
-            background: #E7E7E7;
-            color: #5F5F5F;
-          }
-        </style>
+      <bb-subheader heading="Subheader" class="theme-dark">
+        <style scoped>@import url("../src/bb-subheader.css");</style>
+        Subheader
       </bb-subheader>
     </section>
 
-    <section class="theme-organic">
-      <bb-header nav="back" heading="Organic theme" counter="(1)">
-        <style scoped>
-          @import url("../src/headers.css");
-          @import url("../src/theme.organic.css");
-        </style>
+    <section>
+      <bb-header nav="back" heading="Organic theme" counter="(1)" class="theme-organic">
+        <style scoped>@import url("../src/bb-header.css");</style>
         <button class="icon">list-edit</button>
         <button class="icon">add</button>
       </bb-header>
-      <bb-subheader id="subheader" heading="Subheader">
-        <style scoped>
-          :scope {
-            padding: 0.8rem 3rem;
-            font-weight: 400;
-            font-size: 1.5rem;
-            line-height: 1.8rem;
-            display: block;
-            background: #E7E7E7;
-            color: #5F5F5F;
-          }
-        </style>
+      <bb-subheader id="subheader" heading="Subheader" class="theme-organic">
+        <style scoped>@import url("../src/bb-subheader.css");</style>
+        Subheader
       </bb-subheader>
     </section>
   
     <section>
       <header>
-        <style scoped>@import url("../src/headers.css");</style>
+        <style scoped>@import url("../src/bb-header.css");</style>
         <a href="#" class="icon icon-nav-back">back</a>
         <menu role="toolbar">
           <a href="#" class="icon icon-list-edit">list-edit</a>
           <a href="#" class="icon icon-add">add</a>
         </menu>
         <h1>Title</h1>
+      </header>
+      <header>
+        <h2>
+          <style scoped>@import url("../src/bb-subheader.css");</style>
+          Subheader
+        </h2>
       </header>
     </section>
   </body>

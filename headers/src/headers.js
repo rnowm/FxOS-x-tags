@@ -4,12 +4,16 @@
     lifecycle: {
       created: function(){
         var actionButton = xtag.queryChildren(this, 'button');
-        for (var i=0; i<actionButton.length; i++) {
-          if (actionButton[i].className == "icon") {
-            actionButton[i].className = "icon icon-" 
-              + actionButton[i].innerHTML;
+        if (actionButton.length !== 0) {
+          //var actionMenu = document.createElement ('menu');
+          
+          for (var i=0; i<actionButton.length; i++) {
+            if (actionButton[i].className == "icon") {
+              actionButton[i].className = "icon icon-" 
+                + actionButton[i].innerHTML;
+            }
+            actionButton[i].classList.add('action');
           }
-          actionButton[i].classList.add('action');
         }
 
         var navType = this.getAttribute('nav');

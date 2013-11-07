@@ -1,0 +1,20 @@
+/*
+  Theme: Organic
+*/
+
+:scope.theme-organic {
+  background-color: rgba(244,244,244,0.9);
+}
+
+:scope.theme-organic h1 {
+  color: #858585;
+}
+
+:scope.theme-organic .icon:before {
+  color: #00aacc;
+}
+
+:scope.theme-organic .action.icon:before,
+:scope.theme-organic menu .icon:before {
+  color: #858585;
+}

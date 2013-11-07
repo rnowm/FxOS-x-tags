@@ -1,9 +1,11 @@
 /*
   Theme: Default
 */
+
 :scope {
   background-color: #F97C17;
 }
+
 :scope .icon:before {
   color: rgba(0,0,0,0.3);
 }

@@ -1,0 +1,8 @@
+/*
+  Theme: Dark
+*/
+
+:scope.theme-dark {
+  background: #E7E7E7;
+  color: #5F5F5F;
+}
