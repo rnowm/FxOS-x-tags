@@ -2,7 +2,7 @@
   Theme: Dark
 */
 
-:scope.theme-dark {
+:scope {
   background: #E7E7E7;
   color: #5F5F5F;
 }

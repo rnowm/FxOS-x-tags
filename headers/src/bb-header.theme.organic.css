@@ -2,19 +2,19 @@
   Theme: Organic
 */
 
-:scope.theme-organic {
+:scope {
   background-color: rgba(244,244,244,0.9);
 }
 
-:scope.theme-organic h1 {
+:scope h1 {
   color: #858585;
 }
 
-:scope.theme-organic .icon:before {
+:scope .icon:before {
   color: #00aacc;
 }
 
-:scope.theme-organic .action.icon:before,
-:scope.theme-organic menu .icon:before {
+:scope .action.icon:before,
+:scope menu .icon:before {
   color: #858585;
 }

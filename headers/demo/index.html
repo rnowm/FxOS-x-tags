@@ -14,6 +14,9 @@
       section > header:first-child {
         margin-top: 1rem;
       }
+      bb-header {
+        background: red;
+      }
     </style>
   </head>
 
@@ -34,25 +37,37 @@
     </bb-subheader>
 
     <section>
-      <bb-header nav="back" heading="Dark theme" counter="(1)" class="theme-dark">
-        <style scoped>@import url("../src/bb-header.css");</style>
+      <bb-header nav="back" heading="Dark theme" counter="(1)">
+        <style scoped>
+          @import url("../src/bb-header.css");
+          @import url("../src/bb-header.theme.dark.css");
+        </style>
         <button class="icon">list-edit</button>
         <button class="icon">add</button>
       </bb-header>
       <bb-subheader heading="Subheader" class="theme-dark">
-        <style scoped>@import url("../src/bb-subheader.css");</style>
+        <style scoped>
+          @import url("../src/bb-subheader.css");
+          @import url("../src/bb-subheader.theme.dark.css");
+        </style>
         Subheader
       </bb-subheader>
     </section>
 
     <section>
-      <bb-header nav="back" heading="Organic theme" counter="(1)" class="theme-organic">
-        <style scoped>@import url("../src/bb-header.css");</style>
+      <bb-header nav="back" heading="Organic theme" counter="(1)">
+        <style scoped>
+          @import url("../src/bb-header.css");
+          @import url("../src/bb-header.theme.organic.css");
+        </style>
         <button class="icon">list-edit</button>
         <button class="icon">add</button>
       </bb-header>
-      <bb-subheader id="subheader" heading="Subheader" class="theme-organic">
-        <style scoped>@import url("../src/bb-subheader.css");</style>
+      <bb-subheader id="subheader" heading="Subheader">
+        <style scoped>
+          @import url("../src/bb-subheader.css");
+          @import url("../src/bb-subheader.theme.organic.css");
+        </style>
         Subheader
       </bb-subheader>
     </section>

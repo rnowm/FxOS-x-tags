@@ -2,15 +2,15 @@
   Theme: Dark
 */
 
-:scope.theme-dark {
+:scope {
   background-color: rgba(36, 45, 51, 0.9);
 }
 
-:scope.theme-dark .icon:before {
+:scope .icon:before {
   color: #00aacc;
 }
 
-:scope.theme-dark .action.icon:before,
-:scope.theme-dark menu .icon:before {
+:scope .action.icon:before,
+:scope menu .icon:before {
   color: #fff;
 }
