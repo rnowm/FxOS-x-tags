@@ -1,0 +1,22 @@
+/*
+  Theme: Dark
+*/
+
+:scope {
+  background-color: #242D33;
+}
+
+:scope a:hover:after,
+:scope a:active:after,
+:scope button:hover:after,
+:scope button:active:after,
+:scope menu a:hover,
+:scope menu a:active,
+:scope menu button:hover,
+:scope menu button:active {
+  background-color: #1D525E;
+}
+
+:scope .icon:before {
+  color: #00aacc;
+}

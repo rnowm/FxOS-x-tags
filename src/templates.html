@@ -1,9 +1,9 @@
 <template id="header-template">
   <header>
     <style scoped>
-      @import 'headers.css';
+      @import 'css/bb-header.css';
       {{#if theme}}
-      @import 'headers.{{theme}}.css';
+      @import 'css/bb-header.theme.{{theme}}.css';
       {{/if}}
     </style>
     {{#a href=nav-action id=nav-id}}
@@ -20,7 +20,7 @@
 <template id="subheader-template">
   <header>
     <style scoped>
-      @import 'headers.css';
+      @import 'css/bb-subheader.css';
     </style>
     <h2>{{{heading}}}</h2>
   </header>

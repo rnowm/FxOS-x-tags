@@ -1,0 +1,12 @@
+/*
+  Theme: Dark
+*/
+
+:scope {
+  background: #2E3C3F;
+  border: none;
+}
+
+:scope h2 {
+  color: #fff;
+}

@@ -11,32 +11,43 @@
     <link rel="import" href="templates.html">
     <!-- Utils -->
     <script type="text/javascript" src="../lib/import.js"></script>
+    <style>
+      html {
+        font-size: 10px;
+      }
+      section > header:first-child {
+        margin-top: 1rem;
+      }
+    </style>
   </head>
   <body>
-    <section role="region">
+    <section>
       <bb-header heading="Messages" nav="back" nav-action="#back" nav-id="back-button">
         <a href="#"><span class="icon icon-edit">edit</span></a>
         <a href="#"><span class="icon icon-add">add</span></a>
       </bb-header>
     </section>
-    <hr/>
-    <section role="region">
-      <bb-header heading="Messages" nav="menu" nav-action="#menu"></bb-header>
+
+    <section>
+      <bb-header heading="Messages" nav="menu" nav-action="#menu">
+        <a href="#"><span>edit</span></a>
+        <a href="#"><span>add</span></a>
+      </bb-header>
     </section>
-    <hr/>
-    <section role="region">
+
+    <section>
       <bb-header></bb-header>
     </section>
-    <hr/>
-    <section role="region">
+
+    <section>
       <bb-header heading="Contact name" nav="close" nav-action="#close" nav-id="close-button"></bb-header>
     </section>
-    <hr/>
-    <section role="region">
+
+    <section>
       <bb-header counter="(2)"></bb-header>
     </section>
-    <hr/>
-    <section role="region">
+
+    <section>
       <bb-header heading="Title"></bb-header>
       <bb-subheader heading="Subheader"></bb-subheader>
     </section>

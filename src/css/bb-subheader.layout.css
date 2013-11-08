@@ -1,0 +1,14 @@
+:scope {
+  border-bottom: 0.1rem solid #E6E6E6;
+  color: #424242;
+}
+
+:scope h2 {
+  padding: 0.8rem 3rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  display: block;
+  margin: 0;
+  color: #424242;
+}

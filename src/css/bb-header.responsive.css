@@ -1,0 +1,37 @@
+/*
+  Rotation support
+*/
+
+@media screen and (orientation: landscape) {
+
+  :scope {
+    height: 3.5rem;
+  }
+
+  :scope h1 {
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+  }
+
+  :scope a,
+  :scope button {
+    font-size: 1.2rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  :scope a:after,
+  :scope button:after {
+    background-size: 0.2rem 3.5rem;
+  }
+
+  :scope .icon:before {
+    top: 0.3rem;
+  }
+
+  bb-subheader {
+    font-size: 1.2rem;
+    line-height: 0.6rem;
+  }
+
+}

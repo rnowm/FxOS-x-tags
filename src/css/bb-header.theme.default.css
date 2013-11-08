@@ -1,0 +1,22 @@
+/*
+  Theme: Default
+*/
+
+:scope {
+  background-color: #F97C17;
+}
+
+:scope a:hover:after,
+:scope a:active:after,
+:scope button:hover:after,
+:scope button:active:after,
+:scope menu a:hover,
+:scope menu a:active,
+:scope menu button:hover,
+:scope menu button:active {
+  background-color: #DC6A0E;
+}
+
+:scope .icon:before {
+  color: rgba(0,0,0,0.3);
+}
