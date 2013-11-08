@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../lib/icons.css">
     <!-- Header component -->
     <script defer type="text/javascript" src="headers.js"></script>
+    <style>
+      html { font-size: 10px; }
+    </style>
   </head>
   <body> 
     <bb-header heading="Settings"></bb-header>
@@ -21,11 +24,11 @@
       <li>IMG: {{icon}} -> <content></content></li>
     </template>
     <template id="list-template">
-      <style scoped>
-        @import 'list.css';
-      </style>
       <header>{{heading}}</header>
       <ul>
+        <style scoped>
+          @import 'css/bb-list.css';
+        </style>
         <content></content>
       </ul>
     </template>
