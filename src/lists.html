@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- External librairies -->
+    <script type="text/javascript" src="../lib/handlebars.js"></script>
+    <script type="text/javascript" src="../lib/x-tag-core.js"></script>
+    <link rel="stylesheet" href="../lib/icons.css">
+    <!-- Header component -->
+    <script defer type="text/javascript" src="headers.js"></script>
+  </head>
+  <body> 
+    <bb-header heading="Settings"></bb-header>
+    <bb-subheader heading="Subheader"></bb-subheader>
+    <bb-header heading="Setting with organic theme" theme="organic"></bb-header>
+    <bb-subheader heading="Subheader"></bb-subheader>
+    <bb-list heading="List's header">
+      <bb-row icon="plane" id="airplaneMode" switched="on">Airplane mode</bb-row>
+      <bb-row icon="geo" id="geolocalisation" switched="off">Geolocalisation</bb-row>
+    </bb-list>
+    <template id="row-template">
+      <li>IMG: {{icon}} -> <content></content></li>
+    </template>
+    <template id="list-template">
+      <style scoped>
+        @import 'list.css';
+      </style>
+      <header>{{heading}}</header>
+      <ul>
+        <content></content>
+      </ul>
+    </template>
+    <template id="header-template">
+      <header>
+        <style scoped>
+          @import 'headers.css';
+          {{#if theme}}
+          @import 'headers.{{theme}}.css';
+          {{/if}}
+        </style>
+        {{#a href=nav-action id=nav-id}}
+          <span class="icon icon-{{nav}}" data-l10n-id="{{nav}}"></span>
+        {{/a}}
+        {{#if content}}
+        <menu type="toolbar">
+          <content></content>
+        </menu>
+        {{/if}}
+        <h1>{{heading}}{{{em counter}}}</h1>
+      </header>
+    </template>
+    <template id="subheader-template">
+      <header>
+        <style scoped>
+          @import 'headers.css';
+        </style>
+        <h2>{{{heading}}}</h2>
+      </header>
+    </template>
+  </body>
+</html>
+
