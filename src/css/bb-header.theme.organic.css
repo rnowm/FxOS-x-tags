@@ -1,0 +1,29 @@
+/*
+  Theme: Organic
+*/
+
+:scope {
+  background-color: #F4F4F4;
+}
+
+:scope h1,
+:scope menu a,
+:scope menu button,
+:scope menu .icon:before {
+  color: #858585;
+}
+
+:scope a:hover:after,
+:scope a:active:after,
+:scope button:hover:after,
+:scope button:active:after,
+:scope menu a:hover,
+:scope menu a:active,
+:scope menu button:hover,
+:scope menu button:active {
+  background-color: #AAE1E9;
+}
+
+:scope .icon:before {
+  color: #00aacc;
+}
