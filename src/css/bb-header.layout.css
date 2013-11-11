@@ -5,6 +5,11 @@
   display: flex;
   height: 5rem;
   color: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
 }
 
 :scope h1 {

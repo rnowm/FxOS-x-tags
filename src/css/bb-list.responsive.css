@@ -1,0 +1,11 @@
+/*
+  Rotation support
+*/
+
+@media screen and (orientation: landscape) {
+
+  /* Depens on Bug: 916315 */
+  :scope li.title.sticky {
+    top: 3.5rem; /* Header size */
+  }
+}

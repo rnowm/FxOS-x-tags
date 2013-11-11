@@ -1,0 +1,15 @@
+/*
+  Theme: Default
+*/
+
+:scope li {
+  border-color: #e7e7e7;
+}
+
+:scope li.title {
+  border-color: #FF4E00;
+  color: #FF4E00;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  background: #fff;
+}

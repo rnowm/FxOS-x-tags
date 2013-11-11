@@ -1,0 +1,94 @@
+:scope {
+  margin: 0;
+  list-style: none;
+  padding: 0 1.5rem;
+}
+
+:scope li {
+  -moz-box-sizing: border-box;
+  position: relative;
+  border-bottom: 0.1rem solid transparent;
+  color: #000;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  min-height: 6rem;
+  font-size: 1.8rem;
+}
+
+:scope li:last-child {
+  border-bottom: none;
+}
+
+:scope li.title {
+  font-weight: normal;
+  padding: 0.5rem 1rem;
+  min-height: 0;
+  border-bottom: 0.1rem solid transparent;
+}
+
+/* Depens on Bug: 916315 */
+:scope li.title.sticky {
+  position: sticky;
+  top: 5rem; /* Header size */
+  z-index: 10;
+}
+
+/* Pressed state */
+:scope li.active:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1.5rem;
+  bottom: 0;
+  left: -1.5rem;
+  z-index: 10;
+}
+
+:scope li.active:hover:after {
+  background-color: rgba(0,213,255,0.3);
+}
+
+/* Disabled state */
+:scope li[disabled]  {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Content */
+:scope li > .icon {
+  width: 3rem;
+  height: 3rem;
+  padding-right: 1rem;
+  font-size: 0;
+}
+
+:scope li > .content {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+:scope li > .content small {
+  color: #5a6061;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+:scope li > .switch {
+  border-radius: 1.5rem;
+  height: 2.7rem;
+  width: 5.9rem;
+  transition: background 0.2s ease 0s;
+}
+
+:scope li > .switch.on {
+  background: url(../images/switch-on.svg) no-repeat;
+}
+
+:scope li > .switch.off {
+  background: url(../images/switch-off.svg) no-repeat -3.2rem 0rem;
+}
+

@@ -9,26 +9,96 @@
     <script defer type="text/javascript" src="headers.js"></script>
     <style>
       html { font-size: 10px; }
+      body { margin: 0; }
     </style>
   </head>
-  <body> 
-    <bb-header heading="Settings"></bb-header>
-    <bb-subheader heading="Subheader"></bb-subheader>
-    <bb-header heading="Setting with organic theme" theme="organic"></bb-header>
-    <bb-subheader heading="Subheader"></bb-subheader>
-    <bb-list heading="List's header">
-      <bb-row icon="plane" id="airplaneMode" switched="on">Airplane mode</bb-row>
-      <bb-row icon="geo" id="geolocalisation" switched="off">Geolocalisation</bb-row>
+  <body>
+    <bb-header heading="Setting" theme="organic"></bb-header>
+    <bb-list heading="Network & Connectivity" >
+      <bb-row icon="airplane" id="airplaneMode" switched="on">Airplane mode</bb-row>
+      <bb-row icon="geolocation" id="geolocalisation" switched="off">Geolocalisation</bb-row>
+      <bb-row icon="wifi" id="wifi">
+        Wi-Fi
+        <small>Offline</small>
+      </bb-row>
+      <bb-row icon="pick-up" id="callSettings">Call settings</bb-row>
+      <bb-row icon="empty" id="">Cellular & Data</bb-row>
+      <bb-row icon="bluetooth" id="">
+        Bluetooth
+        <small>Turned off</small>
+      </bb-row>
+      <bb-row icon="empty" id="">Internet Sharing</bb-row>
     </bb-list>
+    
+    <bb-list heading="Personalization" >
+      <bb-row icon="speaker" id="">Sound</bb-row>
+      <bb-row icon="empty" id="">Display</bb-row>
+      <bb-row icon="speaker" id="">
+        Notifications
+        <small>Offline</small>
+      </bb-row>
+      <bb-row icon="view-day" id="">Date & Time</bb-row>
+      <bb-row icon="empty" id="">
+        Language
+        <small>English (US)</small>
+      </bb-row>
+      <bb-row icon="keyboard" id="">Keyboard</bb-row>
+    </bb-list>
+    
+    <bb-list heading="Privacy & Security" >
+      <bb-row icon="lock" id="">Phone lock</bb-row>
+      <bb-row icon="sim" id="">
+        SIM security
+        <small>Disabled</small>
+      </bb-row>
+      <bb-row icon="check-mark" id="">App permissions</bb-row>
+      <bb-row icon="contact-delete" id="">Do not track</bb-row>
+    </bb-list>
+    
+    <bb-list heading="Storage" >
+      <bb-row icon="empty" id="">
+        Enable USB storage
+        <small>Enabled</small>
+      </bb-row>
+      <bb-row icon="storage-low" id="">
+        Application storage
+        <small>2.3 GB available</small>
+      </bb-row>
+      <bb-row icon="empty" id="">
+        Application storage
+        <small>700 MB available</small>
+      </bb-row>
+    </bb-list>
+    
+    <bb-list heading="Device" >
+      <bb-row icon="phone" id="">Device information</bb-row>
+      <bb-row icon="batery" id="">
+        Batery
+        <small>84%</small>
+      </bb-row>
+      <bb-row icon="empty" id="">Improve Firefox OS</bb-row>
+      <bb-row icon="empty" id="">Help</bb-row>
+    </bb-list>
+    
     <template id="row-template">
-      <li>IMG: {{icon}} -> <content></content></li>
+      <li>
+        {{#if icon}}
+          <span class="icon icon-{{icon}}">icon-{{icon}}</span>
+        {{/if}}
+        <span class="content"><content></content></span>
+        {{#if switched}}
+          <span class="switch {{switched}}">{{switched}}</span>
+        {{/if}}
+      </li>
     </template>
     <template id="list-template">
-      <header>{{heading}}</header>
       <ul>
         <style scoped>
           @import 'css/bb-list.css';
         </style>
+        {{#if heading}}
+          <li class="title sticky">{{heading}}</li>
+        {{/if}}
         <content></content>
       </ul>
     </template>
