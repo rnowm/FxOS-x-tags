@@ -1,1 +1,1 @@
-# Test using mocha, sinon, Chai
+# Testing x-tags in Firefox OS
