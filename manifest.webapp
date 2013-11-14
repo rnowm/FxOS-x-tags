@@ -1,0 +1,9 @@
+{
+  "name": "X-Tags demo",
+  "description": "Testing X-Tags in Firefox OS",
+  "launch_path": "/src/lists.html",
+  "developer": {
+    "name": "The Gaia Team",
+    "url": "https://github.com/mozilla-b2g/gaia"
+  }
+}
